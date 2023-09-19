@@ -1,0 +1,9 @@
+Decisiones de persistencia
+- Persistimos todo aquello que sea stateful, ya que es de las que nos interesa tener un registro
+- Decidimos persistir todos los presupuestos generados ya que se requiere tener un historial de eso
+- No persistimos las clases que son stateless
+
+Decisiones de diseño
+- Adapter para las apis
+- Strategy para los recargos al calcular el costo
+- Hacer que coordenada sea una clase y no atributos sueltos, para que sea mas comodo y legible
