@@ -1,5 +1,7 @@
 package domain;
 
+import javax.persistence.*;
+
 public abstract class Producto {
     private Integer codigo;
     private String marca;

@@ -1,6 +1,6 @@
 package domain;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 public abstract class Decorado extends Producto{

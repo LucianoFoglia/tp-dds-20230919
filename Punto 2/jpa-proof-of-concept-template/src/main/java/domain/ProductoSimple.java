@@ -1,5 +1,6 @@
 package domain;
 
+import javax.persistence.*;
 public class ProductoSimple extends Producto {
     private Double precio;
     private Integer stock;

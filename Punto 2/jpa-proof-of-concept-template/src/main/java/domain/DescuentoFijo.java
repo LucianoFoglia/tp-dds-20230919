@@ -1,5 +1,7 @@
 package domain;
 
+import javax.persistence.*;
+
 public class DescuentoFijo extends Decorado {
     private Double valor;
 

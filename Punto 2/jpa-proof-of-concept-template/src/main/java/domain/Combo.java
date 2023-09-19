@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import javax.persistence.*;
 
 public class Combo extends Producto{
     private List<Producto> productos;

@@ -1,5 +1,7 @@
 package domain;
 
+import javax.persistence.*;
+
 public class Packaging extends Decorado {
     private Double precio;
 
