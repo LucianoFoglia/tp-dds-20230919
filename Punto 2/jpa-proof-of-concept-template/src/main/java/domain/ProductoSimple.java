@@ -1,8 +1,15 @@
 package domain;
 
 import javax.persistence.*;
+
+@Entity
+@DiscriminatorValue("producto_simple")
 public class ProductoSimple extends Producto {
+
+    @Column(name = "precio")
     private Double precio;
+
+    @Column(name = "stock")
     private Integer stock;
 
     @Override

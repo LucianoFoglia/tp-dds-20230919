@@ -2,10 +2,14 @@ package domain;
 
 import javax.persistence.*;
 
+// TODO: mapear Decorado y sus subclases
 @Entity
+@DiscriminatorValue("producto_simple")
 public abstract class Decorado extends Producto{
 
-    Long id;
+    @Id
+    @GeneratedValue
+    private Long id;
     protected Producto producto;
 
     public Decorado(Producto producto){

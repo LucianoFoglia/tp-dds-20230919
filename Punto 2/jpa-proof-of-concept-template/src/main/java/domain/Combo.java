@@ -6,7 +6,14 @@ import java.util.Comparator;
 import java.util.List;
 import javax.persistence.*;
 
+@Entity
+@DiscriminatorValue("combo")
 public class Combo extends Producto{
+
+    @ManyToMany(targetEntity = Producto.class)
+    @JoinTable(name = "Composicion_Producto",
+            joinColumns = { @JoinColumn(name = "id") },
+            inverseJoinColumns = { @JoinColumn(name = "id") })
     private List<Producto> productos;
 
     public Combo(){
