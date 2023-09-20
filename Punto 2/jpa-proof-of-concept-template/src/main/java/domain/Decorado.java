@@ -10,6 +10,7 @@ public abstract class Decorado extends Producto{
     @Id
     @GeneratedValue
     private Long id;
+    @Column(name = "producto_decorado_id")
     protected Producto producto;
 
     public Decorado(Producto producto){

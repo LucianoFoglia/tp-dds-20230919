@@ -1,11 +1,16 @@
 package domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "producto")
 @DiscriminatorColumn(name="tipo")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Getter
+@Setter
 public abstract class Producto {
 
     @Id
@@ -20,22 +25,6 @@ public abstract class Producto {
 
     @Column(name = "nombre")
     private String nombre;
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
 
     public abstract Double precio();
     public abstract Integer stock();
