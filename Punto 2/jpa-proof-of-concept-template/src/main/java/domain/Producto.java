@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "producto")
-@DiscriminatorColumn(name="tipo")
+@DiscriminatorColumn(name="tipo", discriminatorType = DiscriminatorType.STRING)
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public abstract class Producto {
 
